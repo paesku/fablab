@@ -1,0 +1,48 @@
+@import '../settings';
+
+$nav-active-color: $theme-primary;
+$nav-color: $theme-gray-light;
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  color: $nav-color;
+
+  @media (min-width: #{$small}) {
+    flex-direction: row;
+  }
+
+  li {
+    padding-bottom: .5em;
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &.active {
+      @media (min-width: #{$small}) {
+        border-bottom: 4px solid $nav-active-color;
+      }
+    }
+  }
+}
+
+.small-only {
+  @media (min-width: #{$small}) {
+    display: none;
+  }
+}
+
+.hide-for-small {
+  @media (max-width: #{$small}) {
+    display: none;
+  }
+}

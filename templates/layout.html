@@ -1,0 +1,16 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{ '/static/gen/styles.css'|url }}">
+<title>{% block title %}Welcome{% endblock %} — FabLab Leipzig</title>
+<body>
+  <header class="main-header grid bottom space-between">
+    <img src="{{ '/images/fll-logo-full-01.png'|url }}" alt="">
+    {% include 'navigation.html' %}
+  </header>
+  <div class="page container">
+    {% block body %}{% endblock %}
+  </div>
+  {% include 'footer.html' %}
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script type=text/javascript src="{{'/static/gen/app.js'|url }}" charset="utf-8"></script>
+</body>

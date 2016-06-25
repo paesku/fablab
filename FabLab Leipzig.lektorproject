@@ -1,0 +1,5 @@
+[project]
+name = FabLab Leipzig
+
+[packages]
+lektor-webpack-support = 0.1

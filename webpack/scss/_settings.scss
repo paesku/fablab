@@ -1,0 +1,13 @@
+$pure-white: #fff;
+$theme-white: #eee;
+$theme-primary: #0096d6;
+$theme-gray: #333;
+$theme-gray-light: #888;
+$theme-space: 1em;
+
+$breakpoints: (
+  small: 480px,
+  medium: 800px
+);
+
+$small: map-get($breakpoints, small);

@@ -1,0 +1,11 @@
+@import '../settings';
+$link-color: $theme-primary;
+
+a {
+  color: $link-color;
+}
+
+
+.link {
+  cursor: pointer;
+}

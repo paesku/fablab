@@ -1,17 +1,17 @@
 <nav>
   <div class="small-only link" id="toggle" data-toggle="nav">
-    Menu
+    {% include 'partials/hamburger.svg' %}
   </div>
   <ul id="nav" class="nav hide-for-small">
     <li{% if this._path == '/' %} class="active"{% endif
-      %}><a href="{{ '/'|url }}">Welcome</a></li>
-  <!--  {% for href, title in [
-      ['/blog', 'Blog'],
-      ['/projects', 'Projects'],
-      ['/about', 'About']
-    ] %}
+      %}>
+      {% for href, title in [
+        ['/team', 'Team'],
+        ['/projects', 'Projekte'],
+        ['/about', 'Über']
+      ] %}
       <li{% if this.is_child_of(href) %} class="active"{% endif
         %}><a href="{{ href|url }}">{{ title }}</a></li>
-    {% endfor %} -->
+    {% endfor %}
   </ul>
 </nav>

@@ -1,22 +1,27 @@
 @import '../settings';
 
-$background-color: $theme-white;
+$page-background-color: $theme-white;
+$footer-background-color: $theme-gray;
 $page-padding: $theme-space;
+$page-header-padding: $page-padding / 2;
 
 body {
   padding: 0;
-  font-size: 22px;
-  background-color: $background-color;
+  background-color: $page-background-color;
 }
 
-.main-header {
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: $page-header-padding;
   padding-right: $theme-space;
   padding-left: $theme-space;
   background-color: $pure-white;
   box-shadow: 0 0 2px 2px rgba(120, 120, 120, .5);
 
-  img {
-    padding-top: $page-padding;
+  @media (min-width: #{$small}) {
+    align-items: baseline;
   }
 
 }
@@ -29,4 +34,10 @@ body {
 .container {
   max-width: 46em;
   margin: 0 auto;
+}
+
+
+.page-footer {
+  color: $theme-white;
+  background-color: $footer-background-color;
 }

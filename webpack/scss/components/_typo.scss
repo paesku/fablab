@@ -1,4 +1,31 @@
 @import '../settings';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,600');
+
+$headings: (
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+);
+
+@each $heading in $headings {
+  #{$heading} {
+    font-family: Open Sans Condensed;
+    font-weight: 300;
+  }
+};
+
+p {
+  font-family: Open Sans;
+  font-weight: 400;
+
+  &.bold {
+    font-weight: 600;
+  }
+}
+
 $link-color: $theme-primary;
 
 a {

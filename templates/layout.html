@@ -4,8 +4,10 @@
 <link rel="shortcut icon" href="{{ '/favicon/fll_favicon.ico'|url }}">
 <title>{% block title %}Welcome{% endblock %} — FabLab Leipzig</title>
 <body>
-  <header class="main-header grid bottom space-between">
-    <img src="{{ '/images/fll-logo-full-01.png'|url }}" alt="">
+  <header class="page-header">
+    <a href="{{ '/'|url }}">
+      <img src="{{ '/images/fll-logo-full-01.png'|url }}" alt="">
+    </a>
     {% include 'navigation.html' %}
   </header>
   <div class="page container">

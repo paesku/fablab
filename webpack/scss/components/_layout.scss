@@ -42,8 +42,8 @@ body {
     height: 100%;
     opacity: .95;
     background: linear-gradient(to bottom right,
-      lighten($theme-primary, 40%) 0%,
-      darken($theme-primary, 10%) 100%
+      #39dc64 0%,
+      $theme-primary 100%
     );
     mix-blend-mode: multiply;
   }

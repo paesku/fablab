@@ -3,3 +3,6 @@ name = FabLab Leipzig
 
 [packages]
 lektor-webpack-support = 0.1
+
+[servers.ghpages]
+target = ghpages+https://paesku/fablab

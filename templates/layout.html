@@ -10,8 +10,17 @@
     </a>
     {% include 'navigation.html' %}
   </header>
-  <div class="page-main page container">
-    {% block body %}{% endblock %}
+  {% if this._path == '/' %}
+  <div class="page-image-wrapper">
+    <div class="page-image" style="background-image: url({{ './images/fll-arduino-lego.jpg'|url }})" ></div>
+    <div class="page-image-gradient"></div>
+  </div>
+  {% endif%}
+  <div class="page-main page container"
+  {% if this._path == '/' %}
+  style="color: #fff;"
+  {% endif%}>
+  {% block body %}{% endblock %}
   </div>
   {% include 'footer.html' %}
   <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>

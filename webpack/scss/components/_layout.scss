@@ -4,6 +4,7 @@ $page-background-color: $theme-white;
 $footer-background-color: $theme-gray;
 $page-padding: $theme-space;
 $page-header-padding: $page-padding / 2;
+$page-max-width: $theme-max-width;
 
 body {
   display: flex;
@@ -26,10 +27,45 @@ body {
   @media (min-width: #{$small}) {
     align-items: baseline;
   }
-
 }
+
+
+.page-image-wrapper {
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  height: 80%;
+
+  .page-image-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .95;
+    background: linear-gradient(to bottom right,
+      lighten($theme-primary, 40%) 0%,
+      darken($theme-primary, 10%) 100%
+    );
+    mix-blend-mode: multiply;
+  }
+
+  .page-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: grayscale(1);
+  }
+}
+
 .page-main {
   flex: 1;
+}
+
+.page-footer {
+  color: $theme-white;
+  background-color: $footer-background-color;
 }
 
 .page {
@@ -38,12 +74,11 @@ body {
 }
 
 .container {
-  max-width: 46em;
+  max-width: $page-max-width;
   margin: 0 auto;
 }
 
 
-.page-footer {
-  color: $theme-white;
-  background-color: $footer-background-color;
+img {
+  max-width: 100%;
 }

@@ -1,0 +1,11 @@
+{% macro render_team_member(member) %}
+  <div class="grid-blocks team-member">
+    <div class="">
+      <img src="{{ member.image|url }}" alt="" />
+      <h3>{{ member.title }}</3>
+    </div>
+    <div class="">
+      {{ member.body }}
+    </div>
+  </div>
+{% endmacro %}

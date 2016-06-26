@@ -1,11 +1,9 @@
 {% extends "layout.html" %}
-{% block title %}{{ this.title }}{% endblock %}
+{% from "macros/member.html" import render_team_member %}
 {% block body %}
-  <h1>{{ this.title }}</h1>
-  <div class="">
-    {% for image in this.attachments.images %}
-    <div class="image"><img src="{{ image|url }}"></div>
-    {% endfor %}
-    {{ this.body }}
-  </div>
+  <h2>{{ this.title }}</h2>
+  <p>{{ this.body }}</p>
+  {% for child in this.children %}
+    {{ render_team_member(child) }}
+  {% endfor %}
 {% endblock %}

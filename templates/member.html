@@ -2,5 +2,7 @@
 {% from "macros/member.html" import render_team_member %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
+<div class="grid-block">
   {{ render_team_member(this) }}
+</div>
 {% endblock %}

@@ -1,11 +1,15 @@
-{% macro render_team_member(member) %}
-  <div class="grid-blocks team-member">
+{% macro render_team_member(member, from_index=false) %}
     <div class="">
-      <img src="{{ member.image|url }}" alt="" />
+      {% for image in member.attachments.images %}
+      <img src="{{ image|url }}" alt="{{member.image}}">
+      {% endfor %}
+      {% if from_index %}
+      <h2><a href="{{ member|url }}">{{ member.title }}</a></h2>
+      {% else %}
       <h3>{{ member.title }}</3>
+      {% endif %}
     </div>
     <div class="">
       {{ member.body }}
     </div>
-  </div>
 {% endmacro %}

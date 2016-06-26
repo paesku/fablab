@@ -4,6 +4,8 @@
   <h2>{{ this.title }}</h2>
   <p>{{ this.body }}</p>
   {% for child in this.children %}
-    {{ render_team_member(child) }}
+  <div class="grid-blocks team-member">
+    {{ render_team_member(child, from_index=true) }}
+  </div>
   {% endfor %}
 {% endblock %}

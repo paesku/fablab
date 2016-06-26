@@ -5,4 +5,5 @@ name = FabLab Leipzig
 lektor-webpack-support = 0.1
 
 [servers.ghpages]
+name = Github Pages
 target = ghpages+https://paesku/fablab

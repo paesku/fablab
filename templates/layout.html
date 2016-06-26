@@ -5,10 +5,12 @@
 <title>{% block title %}Welcome{% endblock %} — FabLab Leipzig</title>
 <body>
   <header class="page-header">
+    <div class="container">
     <a href="{{ '/'|url }}">
       <img src="{{ '/images/fll-logo-full-01.png'|url }}" alt="">
     </a>
     {% include 'navigation.html' %}
+    </div>
   </header>
   {% if this._path == '/' %}
   <div class="page-image-wrapper">

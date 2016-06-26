@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+{% from "macros/member.html" import render_team_member %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  {{ render_team_member(this) }}
+{% endblock %}
